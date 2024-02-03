@@ -1,0 +1,108 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: rgba(0, 0, 0, 1); /* Slight dark background to make loader prominent */
+    overflow: hidden;
+  }
+  
+  .noauthtitle{
+    font-size: 2rem !important;
+    color: #E0E0E0;
+    text-align: center;
+    font-family: 'Bold';
+    animation: float 3s infinite;
+  }
+
+  .subtitle{
+    font-size: 1rem !important;
+    color: #E0E0E0;
+    text-align: center;
+    font-family: 'Regular';
+    animation: float 3s infinite;
+  }
+
+  @keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+  }
+
+  
+  .planet-loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #2b3760, #1b2431, #0a1020);
+    position: relative;
+    animation: spin 10s linear infinite;
+    box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.5); /* Gold glow */
+  }
+  
+  .orbiting-satellite, .orbiting-satellite.satellite2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #FFD700; /* Gold color */
+    border-radius: 50%;
+    transform-origin: center -60px;
+  }
+  
+  .orbiting-satellite {
+    animation: orbit 5s linear infinite;
+  }
+  
+  .orbiting-satellite.satellite2 {
+    transform-origin: center 60px;
+    animation: orbit-reverse 5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes orbit-reverse {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  
+
+  
+
+
+
+

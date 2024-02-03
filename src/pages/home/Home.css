@@ -1,0 +1,379 @@
+.home-container {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: auto; /* To handle any content that might exceed the viewport height */
+  background: linear-gradient(45deg, #2b3760, #1b2431);
+}
+
+/* Card with starry background */
+.starry-card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  background-color: #1f2639;
+}
+
+.description-content {
+  z-index: 1; /* Increase the z-index value */
+  width: 65%;
+  position: absolute;
+  top: 50%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  text-align: center;
+  color: white;
+  padding: 20px;
+  animation: fadeIn 2s forwards;
+}
+
+/* Animating stars */
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: twinkle var(--star-duration) infinite alternate;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.section-container {
+  margin: 20px 0;
+  padding: 15px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  /* color: #FFD700; */
+  color: white;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 0px; /* Some padding to ensure it's not sticking to the edge */
+}
+
+/* .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #FFD700; 
+  background: linear-gradient(90deg, #FFD700, #FFA500); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left; 
+} */
+
+/* Styling the course cards to match the space theme */
+.ant-card {
+  background: linear-gradient(145deg, #1f2639, #2b3760);
+  border: 1px solid rgba(255, 215, 0, 0.2); /* Faint gold border */
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* To ensure child elements don't overflow */
+}
+
+.ant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ant-card .ant-card-cover img {
+  transition: transform 0.3s; /* Smooth transition for the image scale */
+}
+
+.ant-card:hover .ant-card-cover img {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.ant-card-meta-title {
+  color: #ffd700; /* Gold color for the course title */
+  background: linear-gradient(90deg, #ffd700, #ffa500); /* Gradient effect */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px !important;
+}
+
+.course-card-cover {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.course-card-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resize the image to cover the container */
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.quiz-card {
+  background: linear-gradient(145deg, #1f2639, #2b3760);
+  color: #ffd700; /* Gold color for the text */
+  border: 1px solid rgba(255, 215, 0, 0.2); /* Faint gold border */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.quiz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+}
+
+.gradient-text {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffd700, #ffa500); /* Gradient effect */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .planet-name {
+  background: linear-gradient(90deg, #FFD700, #FFA500) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.quiz-details {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.quiz-questions-count {
+  opacity: 0.7; /* Reduced opacity */
+}
+
+.divider {
+  width: 2px;
+  height: 20px;
+  background-color: #ffd700; /* Gold color */
+  margin: 0 10px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulser {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.no-quizzes-message {
+  color: #ffd700; /* Gold color for the message */
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0px;
+  animation: pulser 2s infinite;
+}
+
+.no-quizzes-message span {
+  font-size: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* .footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: linear-gradient(145deg, #1f2639, #2b3760); 
+ background: transparent;
+  position: relative;
+  bottom: 0;
+  left: 0;
+} */
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  /*  background: linear-gradient(145deg, #1f2639, #2b3760); */ /* Faint gradient background */
+  background-color: #1f2639;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #ffffff; /* Gold color */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow */
+}
+
+.footer-text .heart {
+  display: inline-block;
+  color: red; /* Red heart */
+  animation: pulseing 1.5s infinite; /* Pulsing animation */
+  text-shadow: none;
+}
+
+@keyframes pulseing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.planet-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0px;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background: url("../assets/planet.png") no-repeat center center; /* Adjust the path as necessary */
+  background-size: cover;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffd700;
+  font-size: 20px;
+  z-index: 5;
+}
+
+.satellite {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffd700;
+  font-size: 24px;
+  z-index: 2;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border: 1px dashed grey;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.satellite.html {
+  animation: orbit-html 10s infinite linear;
+}
+
+.satellite.css {
+  animation: orbit-css 10s infinite linear;
+}
+
+.satellite.js {
+  animation: orbit-js 10s infinite linear;
+}
+
+.planet-name {
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Increased shadow spread and opacity */
+  background: linear-gradient(
+    90deg,
+    #ffd700,
+    #ff4500
+  ); /* Adjusted gradient colors */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 5px 10px; /* Added padding for better spacing */
+  border-radius: 5px; /* Rounded corners for the text background */
+}
+
+@keyframes orbit-html {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px)
+      rotate(-360deg);
+  }
+}
+
+@keyframes orbit-css {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg) translateX(100px)
+      rotate(-120deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(480deg) translateX(100px)
+      rotate(-480deg);
+  }
+}
+
+@keyframes orbit-js {
+  0% {
+    transform: translate(-50%, -50%) rotate(240deg) translateX(100px)
+      rotate(-240deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(600deg) translateX(100px)
+      rotate(-600deg);
+  }
+}

@@ -1,0 +1,6 @@
+.video-container {
+  width: 100%; /* Full viewport width */
+  /* Full viewport height */
+  overflow: auto; /* To handle any content that might exceed the viewport height */
+  background: linear-gradient(45deg, #2b3760, #1b2431);
+}

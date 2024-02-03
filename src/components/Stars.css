@@ -1,0 +1,49 @@
+.star-container {
+    animation: gravity 200s linear infinite, rotateContainer 50s linear infinite;
+    width: 150vw; /* Increase the width */
+    height: 150vh; /* Increase the height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+  }
+  
+  .star {
+    background: #FFF;
+    border-radius: 100px;
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    filter: brightness(5);
+    animation: flash 10s linear infinite; /* Ensure flash animation is applied */
+    left: calc(var(--randomX) * 100%); /* Use CSS variables for positioning */
+    top: calc(var(--randomY) * 100%);
+  }
+  
+  @keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes gravity {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateContainer {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,2376 @@
+/*  html, body {
+  background: #000;
+  overflow: hidden;
+  height: 100%;
+} 
+
+.container {
+  margin: 250px auto;
+  width: 768px;
+  transform: scale(0.6);
+} */
+
+
+
+/* html, body {
+  background: #000;
+  overflow: hidden;
+  height: 100%;
+  margin: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}  */
+.loading-page {
+  background: #000;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+
+  @media (max-width: 768px) {
+    height: 100vh;
+  width: 100vw;
+    .container {
+      width: 100%; // Take up the full width of the screen
+      transform: scale(1); // Reset the scale to default
+      margin: 0; // Reset any margins
+      padding: 20px; // Add some padding to prevent content from touching the edges
+    }
+  }
+  .container {
+    width: 768px;
+    transform: scale(0.4);
+  }
+  
+  
+  .sun {
+    background: linear-gradient(90deg, #BB513E, #994233);
+    box-shadow: inset 15px 10px 0px #994233;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin: 105px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  .mercury {
+    background: linear-gradient(90deg, #453217, #2a1f0e);
+    box-shadow: inset 0px 7px 0px #2a1f0e;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 10px;
+  }
+  
+  .venus {
+    background: linear-gradient(90deg, #AC6339, #915430);
+    box-shadow: inset 0px 7px 0px #7e492a;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 30px;
+  }
+  
+  .earth {
+    background: linear-gradient(90deg, #3E8EBB, #357aa0);
+    box-shadow: inset 0px 7px 0px #2f6b8d;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 70px;
+  }
+  
+  .mars {
+    background: linear-gradient(90deg, #6F3125, #54251c);
+    box-shadow: inset 0px 7px 0px #4d221a;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 110px;
+  }
+  
+  .jupiter {
+    background: linear-gradient(90deg, #3D2C14, #22190b);
+    box-shadow: inset 0px 7px 0px #2a1e0e;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 160px;
+  }
+  
+  .saturn {
+    background: linear-gradient(90deg, #E97340, #e55c20);
+    box-shadow: inset 0px 7px 0px #ca4d17;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 200px;
+  }
+  
+  .uranus {
+    background: linear-gradient(90deg, #337799, #2a627e);
+    box-shadow: inset 0px 7px 0px #24536b;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 240px;
+  }
+  
+  .neptune {
+    background: linear-gradient(90deg, #6ACDC0, #4fc4b5);
+    box-shadow: inset 0px 7px 0px #38a899;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 280px;
+  }
+  
+  .pluto {
+    background: linear-gradient(90deg, #C6C053, #b8b23d);
+    box-shadow: inset 0px 7px 0px #a59f37;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: 320px;
+  }
+  
+  [class*=-orbit] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px solid #333;
+    box-shadow: 0px 1px 1px #4096EE;
+    border-radius: 100%;
+  }
+  
+  .mercurys-orbit {
+    width: 100px;
+    height: 100px;
+    margin: 85px auto;
+    -webkit-animation: gravity 0.60057s linear infinite;
+            animation: gravity 0.60057s linear infinite;
+  }
+  
+  .venus-orbit {
+    width: 170px;
+    height: 170px;
+    margin: 50px auto;
+    -webkit-animation: gravity 3.3365s linear infinite;
+            animation: gravity 3.3365s linear infinite;
+  }
+  
+  .earths-orbit {
+    width: 270px;
+    height: 270px;
+    margin: 0px auto;
+    -webkit-animation: gravity 6.673s linear infinite;
+            animation: gravity 6.673s linear infinite;
+  }
+  
+  .mars-orbit {
+    width: 370px;
+    height: 370px;
+    margin: -50px auto;
+    -webkit-animation: gravity 10.0095s linear infinite;
+            animation: gravity 10.0095s linear infinite;
+  }
+  
+  .jupiters-orbit {
+    width: 470px;
+    height: 470px;
+    margin: -100px auto;
+    -webkit-animation: gravity 13.346s linear infinite;
+            animation: gravity 13.346s linear infinite;
+  }
+  
+  .saturns-orbit {
+    width: 570px;
+    height: 570px;
+    margin: -150px auto;
+    -webkit-animation: gravity 20.019s linear infinite;
+            animation: gravity 20.019s linear infinite;
+  }
+  
+  .uranus-orbit {
+    width: 670px;
+    height: 670px;
+    margin: -200px auto;
+    -webkit-animation: gravity 26.692s linear infinite;
+            animation: gravity 26.692s linear infinite;
+  }
+  
+  .neptunes-orbit {
+    width: 770px;
+    height: 770px;
+    margin: -250px auto;
+    -webkit-animation: gravity 33.365s linear infinite;
+            animation: gravity 33.365s linear infinite;
+  }
+  
+  .plutos-orbit {
+    width: 870px;
+    height: 870px;
+    margin: -300px auto;
+    margin-left: -50px;
+    -webkit-animation: gravity 40.038s linear infinite;
+            animation: gravity 40.038s linear infinite;
+  }
+  
+  .starshape-container {
+    -webkit-animation: gravity 200s linear infinite;
+            animation: gravity 200s linear infinite;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: -200px 0;
+  }
+  
+  .starshape {
+    background: #FFF;
+    border-radius: 100px;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    filter: brightness(5);
+  }
+  
+  .starshape:nth-of-type(1) {
+    margin-left: 2847px;
+    margin-top: 299px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(2) {
+    margin-left: 848px;
+    margin-top: 297px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(3) {
+    margin-left: 341px;
+    margin-top: 427px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(4) {
+    margin-left: 767px;
+    margin-top: 819px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(5) {
+    margin-left: 1481px;
+    margin-top: 483px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(6) {
+    margin-left: 2144px;
+    margin-top: 123px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(7) {
+    margin-left: 3559px;
+    margin-top: 565px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(8) {
+    margin-left: 2708px;
+    margin-top: 555px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(9) {
+    margin-left: 2459px;
+    margin-top: 849px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(10) {
+    margin-left: 3335px;
+    margin-top: 758px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(11) {
+    margin-left: 3566px;
+    margin-top: 664px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(12) {
+    margin-left: 2636px;
+    margin-top: 392px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(13) {
+    margin-left: 2929px;
+    margin-top: 598px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(14) {
+    margin-left: 488px;
+    margin-top: 574px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(15) {
+    margin-left: 2417px;
+    margin-top: 502px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(16) {
+    margin-left: 1506px;
+    margin-top: 631px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(17) {
+    margin-left: 3653px;
+    margin-top: 137px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(18) {
+    margin-left: 23px;
+    margin-top: 579px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(19) {
+    margin-left: 1717px;
+    margin-top: 64px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(20) {
+    margin-left: 3437px;
+    margin-top: 146px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(21) {
+    margin-left: 1400px;
+    margin-top: 357px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(22) {
+    margin-left: 1537px;
+    margin-top: 807px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(23) {
+    margin-left: 1915px;
+    margin-top: 723px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(24) {
+    margin-left: 1608px;
+    margin-top: 329px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(25) {
+    margin-left: 3975px;
+    margin-top: 149px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(26) {
+    margin-left: 1973px;
+    margin-top: 90px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(27) {
+    margin-left: 1966px;
+    margin-top: 159px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(28) {
+    margin-left: 2963px;
+    margin-top: 88px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(29) {
+    margin-left: 3900px;
+    margin-top: 31px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(30) {
+    margin-left: 2417px;
+    margin-top: 362px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(31) {
+    margin-left: 122px;
+    margin-top: 819px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(32) {
+    margin-left: 33px;
+    margin-top: 16px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(33) {
+    margin-left: 3768px;
+    margin-top: 43px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(34) {
+    margin-left: 2720px;
+    margin-top: 732px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(35) {
+    margin-left: 2114px;
+    margin-top: 621px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(36) {
+    margin-left: 2148px;
+    margin-top: 87px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(37) {
+    margin-left: 2351px;
+    margin-top: 589px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(38) {
+    margin-left: 2523px;
+    margin-top: 308px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(39) {
+    margin-left: 2253px;
+    margin-top: 90px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(40) {
+    margin-left: 131px;
+    margin-top: 395px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(41) {
+    margin-left: 321px;
+    margin-top: 50px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(42) {
+    margin-left: 3752px;
+    margin-top: 652px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(43) {
+    margin-left: 3447px;
+    margin-top: 240px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(44) {
+    margin-left: 3872px;
+    margin-top: 750px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(45) {
+    margin-left: 839px;
+    margin-top: 704px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(46) {
+    margin-left: 3796px;
+    margin-top: 32px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(47) {
+    margin-left: 1405px;
+    margin-top: 163px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(48) {
+    margin-left: 2948px;
+    margin-top: 90px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(49) {
+    margin-left: 901px;
+    margin-top: 792px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(50) {
+    margin-left: 2290px;
+    margin-top: 115px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(51) {
+    margin-left: 3037px;
+    margin-top: 454px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(52) {
+    margin-left: 1729px;
+    margin-top: 861px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(53) {
+    margin-left: 2783px;
+    margin-top: 594px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(54) {
+    margin-left: 1509px;
+    margin-top: 637px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(55) {
+    margin-left: 103px;
+    margin-top: 897px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(56) {
+    margin-left: 3446px;
+    margin-top: 291px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(57) {
+    margin-left: 455px;
+    margin-top: 26px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(58) {
+    margin-left: 1057px;
+    margin-top: 728px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(59) {
+    margin-left: 682px;
+    margin-top: 406px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(60) {
+    margin-left: 942px;
+    margin-top: 749px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(61) {
+    margin-left: 3814px;
+    margin-top: 306px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(62) {
+    margin-left: 710px;
+    margin-top: 517px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(63) {
+    margin-left: 2526px;
+    margin-top: 22px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(64) {
+    margin-left: 3400px;
+    margin-top: 27px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(65) {
+    margin-left: 1094px;
+    margin-top: 832px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(66) {
+    margin-left: 2830px;
+    margin-top: 36px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(67) {
+    margin-left: 1450px;
+    margin-top: 88px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(68) {
+    margin-left: 2885px;
+    margin-top: 553px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(69) {
+    margin-left: 516px;
+    margin-top: 23px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(70) {
+    margin-left: 963px;
+    margin-top: 298px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(71) {
+    margin-left: 515px;
+    margin-top: 640px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(72) {
+    margin-left: 404px;
+    margin-top: 451px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(73) {
+    margin-left: 2425px;
+    margin-top: 17px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(74) {
+    margin-left: 127px;
+    margin-top: 778px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(75) {
+    margin-left: 3154px;
+    margin-top: 581px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(76) {
+    margin-left: 2874px;
+    margin-top: 402px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(77) {
+    margin-left: 2167px;
+    margin-top: 517px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(78) {
+    margin-left: 3334px;
+    margin-top: 593px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(79) {
+    margin-left: 974px;
+    margin-top: 337px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(80) {
+    margin-left: 2633px;
+    margin-top: 598px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(81) {
+    margin-left: 514px;
+    margin-top: 583px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(82) {
+    margin-left: 369px;
+    margin-top: 207px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(83) {
+    margin-left: 1562px;
+    margin-top: 705px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(84) {
+    margin-left: 123px;
+    margin-top: 894px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(85) {
+    margin-left: 1056px;
+    margin-top: 606px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(86) {
+    margin-left: 2639px;
+    margin-top: 727px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(87) {
+    margin-left: 3097px;
+    margin-top: 721px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(88) {
+    margin-left: 2662px;
+    margin-top: 88px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(89) {
+    margin-left: 1193px;
+    margin-top: 640px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(90) {
+    margin-left: 642px;
+    margin-top: 164px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(91) {
+    margin-left: 3000px;
+    margin-top: 154px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(92) {
+    margin-left: 2881px;
+    margin-top: 688px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(93) {
+    margin-left: 3540px;
+    margin-top: 562px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(94) {
+    margin-left: 146px;
+    margin-top: 148px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(95) {
+    margin-left: 1221px;
+    margin-top: 508px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(96) {
+    margin-left: 994px;
+    margin-top: 859px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(97) {
+    margin-left: 377px;
+    margin-top: 762px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(98) {
+    margin-left: 475px;
+    margin-top: 337px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(99) {
+    margin-left: 2855px;
+    margin-top: 761px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(100) {
+    margin-left: 563px;
+    margin-top: 594px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(101) {
+    margin-left: 3066px;
+    margin-top: 785px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(102) {
+    margin-left: 3001px;
+    margin-top: 674px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(103) {
+    margin-left: 3488px;
+    margin-top: 142px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(104) {
+    margin-left: 817px;
+    margin-top: 232px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(105) {
+    margin-left: 907px;
+    margin-top: 373px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(106) {
+    margin-left: 2752px;
+    margin-top: 175px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(107) {
+    margin-left: 994px;
+    margin-top: 17px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(108) {
+    margin-left: 1194px;
+    margin-top: 803px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(109) {
+    margin-left: 2378px;
+    margin-top: 289px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(110) {
+    margin-left: 1495px;
+    margin-top: 229px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(111) {
+    margin-left: 3806px;
+    margin-top: 576px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(112) {
+    margin-left: 3652px;
+    margin-top: 332px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(113) {
+    margin-left: 542px;
+    margin-top: 273px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(114) {
+    margin-left: 2697px;
+    margin-top: 163px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(115) {
+    margin-left: 3544px;
+    margin-top: 864px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(116) {
+    margin-left: 1414px;
+    margin-top: 611px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(117) {
+    margin-left: 763px;
+    margin-top: 285px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(118) {
+    margin-left: 1615px;
+    margin-top: 653px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(119) {
+    margin-left: 209px;
+    margin-top: 637px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(120) {
+    margin-left: 491px;
+    margin-top: 215px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(121) {
+    margin-left: 314px;
+    margin-top: 709px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(122) {
+    margin-left: 3277px;
+    margin-top: 676px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(123) {
+    margin-left: 2468px;
+    margin-top: 254px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(124) {
+    margin-left: 88px;
+    margin-top: 222px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(125) {
+    margin-left: 1314px;
+    margin-top: 217px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(126) {
+    margin-left: 1109px;
+    margin-top: 332px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(127) {
+    margin-left: 1248px;
+    margin-top: 526px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(128) {
+    margin-left: 523px;
+    margin-top: 602px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(129) {
+    margin-left: 1025px;
+    margin-top: 877px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(130) {
+    margin-left: 1394px;
+    margin-top: 82px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(131) {
+    margin-left: 776px;
+    margin-top: 381px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(132) {
+    margin-left: 504px;
+    margin-top: 894px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(133) {
+    margin-left: 887px;
+    margin-top: 584px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(134) {
+    margin-left: 150px;
+    margin-top: 308px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(135) {
+    margin-left: 1189px;
+    margin-top: 8px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(136) {
+    margin-left: 1074px;
+    margin-top: 505px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(137) {
+    margin-left: 2167px;
+    margin-top: 624px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(138) {
+    margin-left: 2435px;
+    margin-top: 872px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(139) {
+    margin-left: 2836px;
+    margin-top: 456px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(140) {
+    margin-left: 3421px;
+    margin-top: 475px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(141) {
+    margin-left: 2056px;
+    margin-top: 280px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(142) {
+    margin-left: 3815px;
+    margin-top: 857px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(143) {
+    margin-left: 488px;
+    margin-top: 867px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(144) {
+    margin-left: 1092px;
+    margin-top: 474px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(145) {
+    margin-left: 423px;
+    margin-top: 538px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(146) {
+    margin-left: 1265px;
+    margin-top: 673px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(147) {
+    margin-left: 3192px;
+    margin-top: 456px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(148) {
+    margin-left: 3179px;
+    margin-top: 856px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(149) {
+    margin-left: 2647px;
+    margin-top: 685px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(150) {
+    margin-left: 962px;
+    margin-top: 160px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(151) {
+    margin-left: 1839px;
+    margin-top: 584px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(152) {
+    margin-left: 3294px;
+    margin-top: 745px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(153) {
+    margin-left: 3677px;
+    margin-top: 765px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(154) {
+    margin-left: 1570px;
+    margin-top: 191px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(155) {
+    margin-left: 3252px;
+    margin-top: 136px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(156) {
+    margin-left: 1180px;
+    margin-top: 652px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(157) {
+    margin-left: 3772px;
+    margin-top: 182px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(158) {
+    margin-left: 2333px;
+    margin-top: 324px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(159) {
+    margin-left: 3582px;
+    margin-top: 528px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(160) {
+    margin-left: 258px;
+    margin-top: 786px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(161) {
+    margin-left: 552px;
+    margin-top: 864px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(162) {
+    margin-left: 1880px;
+    margin-top: 298px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(163) {
+    margin-left: 2042px;
+    margin-top: 743px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(164) {
+    margin-left: 30px;
+    margin-top: 260px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(165) {
+    margin-left: 512px;
+    margin-top: 816px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(166) {
+    margin-left: 2461px;
+    margin-top: 493px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(167) {
+    margin-left: 536px;
+    margin-top: 81px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(168) {
+    margin-left: 3782px;
+    margin-top: 210px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(169) {
+    margin-left: 2373px;
+    margin-top: 579px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(170) {
+    margin-left: 1801px;
+    margin-top: 690px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(171) {
+    margin-left: 10px;
+    margin-top: 840px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(172) {
+    margin-left: 1105px;
+    margin-top: 91px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(173) {
+    margin-left: 3479px;
+    margin-top: 232px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(174) {
+    margin-left: 211px;
+    margin-top: 99px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(175) {
+    margin-left: 549px;
+    margin-top: 103px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(176) {
+    margin-left: 1086px;
+    margin-top: 622px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(177) {
+    margin-left: 1946px;
+    margin-top: 160px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(178) {
+    margin-left: 1043px;
+    margin-top: 56px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(179) {
+    margin-left: 3923px;
+    margin-top: 550px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(180) {
+    margin-left: 409px;
+    margin-top: 894px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(181) {
+    margin-left: 2200px;
+    margin-top: 335px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(182) {
+    margin-left: 1716px;
+    margin-top: 712px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(183) {
+    margin-left: 3057px;
+    margin-top: 619px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(184) {
+    margin-left: 3219px;
+    margin-top: 776px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(185) {
+    margin-left: 1139px;
+    margin-top: 692px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(186) {
+    margin-left: 1417px;
+    margin-top: 870px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(187) {
+    margin-left: 3513px;
+    margin-top: 895px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(188) {
+    margin-left: 669px;
+    margin-top: 85px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(189) {
+    margin-left: 3762px;
+    margin-top: 18px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(190) {
+    margin-left: 609px;
+    margin-top: 870px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(191) {
+    margin-left: 1775px;
+    margin-top: 699px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(192) {
+    margin-left: 3715px;
+    margin-top: 490px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(193) {
+    margin-left: 1178px;
+    margin-top: 698px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(194) {
+    margin-left: 1725px;
+    margin-top: 490px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(195) {
+    margin-left: 2016px;
+    margin-top: 65px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(196) {
+    margin-left: 848px;
+    margin-top: 325px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(197) {
+    margin-left: 2788px;
+    margin-top: 865px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(198) {
+    margin-left: 1421px;
+    margin-top: 244px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(199) {
+    margin-left: 3515px;
+    margin-top: 482px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(200) {
+    margin-left: 2119px;
+    margin-top: 268px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(201) {
+    margin-left: 2437px;
+    margin-top: 444px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(202) {
+    margin-left: 1095px;
+    margin-top: 131px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(203) {
+    margin-left: 1859px;
+    margin-top: 478px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(204) {
+    margin-left: 3774px;
+    margin-top: 723px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(205) {
+    margin-left: 2375px;
+    margin-top: 459px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(206) {
+    margin-left: 161px;
+    margin-top: 850px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(207) {
+    margin-left: 3220px;
+    margin-top: 242px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(208) {
+    margin-left: 1244px;
+    margin-top: 456px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(209) {
+    margin-left: 3333px;
+    margin-top: 202px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(210) {
+    margin-left: 3500px;
+    margin-top: 293px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(211) {
+    margin-left: 2999px;
+    margin-top: 83px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(212) {
+    margin-left: 2069px;
+    margin-top: 232px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(213) {
+    margin-left: 656px;
+    margin-top: 744px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(214) {
+    margin-left: 125px;
+    margin-top: 423px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(215) {
+    margin-left: 2330px;
+    margin-top: 150px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(216) {
+    margin-left: 1100px;
+    margin-top: 406px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(217) {
+    margin-left: 2412px;
+    margin-top: 797px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(218) {
+    margin-left: 2307px;
+    margin-top: 635px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(219) {
+    margin-left: 1886px;
+    margin-top: 681px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(220) {
+    margin-left: 1706px;
+    margin-top: 547px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(221) {
+    margin-left: 3270px;
+    margin-top: 262px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(222) {
+    margin-left: 195px;
+    margin-top: 619px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(223) {
+    margin-left: 3888px;
+    margin-top: 48px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(224) {
+    margin-left: 3985px;
+    margin-top: 119px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(225) {
+    margin-left: 2361px;
+    margin-top: 661px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(226) {
+    margin-left: 2019px;
+    margin-top: 791px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(227) {
+    margin-left: 2111px;
+    margin-top: 842px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(228) {
+    margin-left: 3523px;
+    margin-top: 433px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(229) {
+    margin-left: 768px;
+    margin-top: 703px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(230) {
+    margin-left: 2694px;
+    margin-top: 810px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(231) {
+    margin-left: 889px;
+    margin-top: 302px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(232) {
+    margin-left: 713px;
+    margin-top: 802px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(233) {
+    margin-left: 2906px;
+    margin-top: 769px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(234) {
+    margin-left: 1300px;
+    margin-top: 350px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(235) {
+    margin-left: 962px;
+    margin-top: 395px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(236) {
+    margin-left: 131px;
+    margin-top: 474px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(237) {
+    margin-left: 2851px;
+    margin-top: 658px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(238) {
+    margin-left: 620px;
+    margin-top: 533px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(239) {
+    margin-left: 741px;
+    margin-top: 558px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(240) {
+    margin-left: 3786px;
+    margin-top: 651px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(241) {
+    margin-left: 589px;
+    margin-top: 142px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(242) {
+    margin-left: 2576px;
+    margin-top: 883px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(243) {
+    margin-left: 599px;
+    margin-top: 303px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(244) {
+    margin-left: 2392px;
+    margin-top: 179px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(245) {
+    margin-left: 3229px;
+    margin-top: 181px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(246) {
+    margin-left: 2804px;
+    margin-top: 429px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(247) {
+    margin-left: 1798px;
+    margin-top: 416px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(248) {
+    margin-left: 2898px;
+    margin-top: 322px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(249) {
+    margin-left: 3381px;
+    margin-top: 354px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(250) {
+    margin-left: 2721px;
+    margin-top: 440px;
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+  }
+  
+  .starshape:nth-of-type(251) {
+    margin-left: 1498px;
+    margin-top: 105px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(252) {
+    margin-left: 3275px;
+    margin-top: 352px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(253) {
+    margin-left: 1299px;
+    margin-top: 127px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(254) {
+    margin-left: 1733px;
+    margin-top: 704px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(255) {
+    margin-left: 514px;
+    margin-top: 392px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(256) {
+    margin-left: 1199px;
+    margin-top: 658px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(257) {
+    margin-left: 3960px;
+    margin-top: 849px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(258) {
+    margin-left: 1071px;
+    margin-top: 84px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(259) {
+    margin-left: 2925px;
+    margin-top: 36px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(260) {
+    margin-left: 1812px;
+    margin-top: 278px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(261) {
+    margin-left: 771px;
+    margin-top: 777px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(262) {
+    margin-left: 1322px;
+    margin-top: 480px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(263) {
+    margin-left: 700px;
+    margin-top: 230px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(264) {
+    margin-left: 473px;
+    margin-top: 679px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(265) {
+    margin-left: 2915px;
+    margin-top: 144px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(266) {
+    margin-left: 1128px;
+    margin-top: 211px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(267) {
+    margin-left: 744px;
+    margin-top: 329px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(268) {
+    margin-left: 361px;
+    margin-top: 726px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(269) {
+    margin-left: 3699px;
+    margin-top: 631px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(270) {
+    margin-left: 3397px;
+    margin-top: 157px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(271) {
+    margin-left: 1654px;
+    margin-top: 396px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(272) {
+    margin-left: 980px;
+    margin-top: 891px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(273) {
+    margin-left: 1342px;
+    margin-top: 560px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(274) {
+    margin-left: 3915px;
+    margin-top: 202px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(275) {
+    margin-left: 249px;
+    margin-top: 641px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(276) {
+    margin-left: 856px;
+    margin-top: 604px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(277) {
+    margin-left: 784px;
+    margin-top: 24px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(278) {
+    margin-left: 3876px;
+    margin-top: 153px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  .starshape:nth-of-type(279) {
+    margin-left: 3928px;
+    margin-top: 634px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(280) {
+    margin-left: 2511px;
+    margin-top: 407px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(281) {
+    margin-left: 2915px;
+    margin-top: 634px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(282) {
+    margin-left: 3571px;
+    margin-top: 158px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(283) {
+    margin-left: 2144px;
+    margin-top: 23px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(284) {
+    margin-left: 675px;
+    margin-top: 355px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(285) {
+    margin-left: 206px;
+    margin-top: 803px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(286) {
+    margin-left: 918px;
+    margin-top: 893px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(287) {
+    margin-left: 2218px;
+    margin-top: 563px;
+    -webkit-animation: flash 1s linear infinite;
+            animation: flash 1s linear infinite;
+  }
+  
+  .starshape:nth-of-type(288) {
+    margin-left: 2066px;
+    margin-top: 722px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(289) {
+    margin-left: 1454px;
+    margin-top: 619px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(290) {
+    margin-left: 3994px;
+    margin-top: 881px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(291) {
+    margin-left: 1526px;
+    margin-top: 108px;
+    -webkit-animation: flash 8s linear infinite;
+            animation: flash 8s linear infinite;
+  }
+  
+  .starshape:nth-of-type(292) {
+    margin-left: 2385px;
+    margin-top: 296px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(293) {
+    margin-left: 2365px;
+    margin-top: 12px;
+    -webkit-animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite;
+  }
+  
+  .starshape:nth-of-type(294) {
+    margin-left: 3633px;
+    margin-top: 67px;
+    -webkit-animation: flash 5s linear infinite;
+            animation: flash 5s linear infinite;
+  }
+  
+  .starshape:nth-of-type(295) {
+    margin-left: 1385px;
+    margin-top: 898px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(296) {
+    margin-left: 547px;
+    margin-top: 506px;
+    -webkit-animation: flash 2s linear infinite;
+            animation: flash 2s linear infinite;
+  }
+  
+  .starshape:nth-of-type(297) {
+    margin-left: 3609px;
+    margin-top: 462px;
+    -webkit-animation: flash 9s linear infinite;
+            animation: flash 9s linear infinite;
+  }
+  
+  .starshape:nth-of-type(298) {
+    margin-left: 485px;
+    margin-top: 535px;
+    -webkit-animation: flash 7s linear infinite;
+            animation: flash 7s linear infinite;
+  }
+  
+  .starshape:nth-of-type(299) {
+    margin-left: 2765px;
+    margin-top: 37px;
+    -webkit-animation: flash 10s linear infinite;
+            animation: flash 10s linear infinite;
+  }
+  
+  .starshape:nth-of-type(300) {
+    margin-left: 2133px;
+    margin-top: 393px;
+    -webkit-animation: flash 6s linear infinite;
+            animation: flash 6s linear infinite;
+  }
+  
+  @-webkit-keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes gravity {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes gravity {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

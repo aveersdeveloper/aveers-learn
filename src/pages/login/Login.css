@@ -1,0 +1,172 @@
+.login-class {
+  /*max-width: 1280px; */
+  width: 100vw;
+  height: 100vh;
+  /* margin: 0 auto;
+  padding: 2rem; */
+  display: flex;
+  place-items: center; 
+  justify-content: center;
+  background-color: #000000 !important;
+  
+  
+  /*text-align: center;*/
+}
+
+.login-card {
+  margin: "auto";
+  
+  height:  65vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  
+  background-color: white;
+  
+}
+
+
+.loginleft{
+   /* /* background-image: url(../src/assets/loginbg2.jpg); * */
+   /* position: relative; */
+    height: 61vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 15px;
+    margin: 15px 0px 0px 15px;
+    background-image: url('../assets/spacebg3final.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Bold';
+    text-align: center;
+    font-size: 35px;
+    color: rgba(255,255,255,255);
+  }
+
+  .login-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 20px;
+    height: 65vh;
+    align-items: "center";
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .login-class {
+      width: auto;
+      height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      place-items: center; 
+      justify-content: center;
+      background-color: #F5F6FB;
+      padding: 1rem;
+    }
+    .login-card {
+      margin: "auto";
+      padding-bottom: 0px;
+      height:  auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      
+      background-color: white;
+      
+    }
+    .loginleft{
+      /* /* background-image: url(../src/assets/loginbg2.jpg); * */
+     position: relative;
+     height: 150px;
+     background-color: black;
+     margin: 15px 15px 0px 15px;
+     }
+     .login-right{
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      padding: 0px 20px 10px 20px;
+      height: auto;
+      align-items: "center";
+      justify-content: center;
+    }
+  }
+  
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    box-sizing: border-box; 
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  .space-background {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; /* Stretch to the right edge of the parent */
+    bottom: 0; /* Stretch to the bottom edge of the parent */
+    background-color: #000;
+    z-index: 999;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle var(--star-duration) infinite alternate;
+    opacity: 0.8; /* Set initial opacity */
+    z-index: 999; /* Ensure stars are above the space background */
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveStar {
+    0%, 100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.5; /* Half fade at 25% */
+    }
+    50% {
+      transform: translate(calc(-1% + 1px), calc(-1% + 1px));
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.5; /* Half fade at 75% */
+    }
+  }
+
+  @keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

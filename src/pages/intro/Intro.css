@@ -1,0 +1,195 @@
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.intro-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  /* background-color: #1a1a2e; */
+  padding: 2rem;
+  gap: 1rem;
+  font-family: "Arial", sans-serif;
+}
+
+.introH1 {
+  font-size: 2rem !important;
+  color: #e0e0e0;
+  text-align: center;
+  font-family: "Bold";
+  animation: float 3s infinite;
+}
+
+.intro-container p {
+  font-size: 1.2rem;
+  color: #a9a9a9;
+  max-width: 800px;
+  font-family: "Regular";
+  text-align: center;
+}
+
+.topic {
+  width: 100%;
+  max-width: 800px;
+  background-color: transparent;
+  /* background-color: #2e2e4a; */
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+  border: 2px solid #ffd700;
+  position: relative;
+}
+
+.topic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.1),
+    rgba(255, 215, 0, 0.3)
+  );
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.topic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.topic h2 {
+  font-size: 1.6rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-family: "Bold";
+}
+
+.topic p {
+  font-size: 1.1rem;
+  color: #a9a9a9;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  font-family: "Regular";
+}
+
+/* ... (rest of the code remains unchanged) */
+
+.space-background {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0; /* Stretch to the right edge of the parent */
+  bottom: 0; /* Stretch to the bottom edge of the parent */
+  background-color: #000;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: twinkle var(--star-duration) infinite alternate;
+  opacity: 0.8; /* Set initial opacity */
+  z-index: -1; /* Ensure stars are above the space background */
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveStar {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5; /* Half fade at 25% */
+  }
+  50% {
+    transform: translate(calc(-1% + 1px), calc(-1% + 1px));
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5; /* Half fade at 75% */
+  }
+}
+
+/* ... (rest of the code remains unchanged) */
+
+.begin-adventure-btn {
+  font-size: 1.4rem;
+  padding: 10px; /* Adjusted padding for better spacing */
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #2b3760, #1b2431);
+  background-size: 400% 400%;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
+  animation: pulse 1.5s infinite alternate, gradientBG 5s ease infinite;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: "Bold";
+  line-height: 1.5; /* Improved line height for better readability */
+  display: inline-block; /* Ensures the button adjusts to its content */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.begin-adventure-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-position: 100% 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ... (rest of the code remains unchanged) */
