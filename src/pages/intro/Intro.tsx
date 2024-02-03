@@ -79,7 +79,7 @@ const Intro: React.FC = () => {
       <div className="space-background"></div>
       <h1 className="introH1">🚀 Blast Off, {username}!</h1>
       <p>
-        Welcome to Aveers Nebula! Let's explore the cosmic tools you'll be
+        Welcome to Aveers Learn! Let's explore the cosmic tools you'll be
         mastering:
       </p>
 

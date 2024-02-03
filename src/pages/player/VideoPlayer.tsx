@@ -5,17 +5,8 @@ import Markdown from "react-markdown";
 import "./VideoPlayer.css";
 import Grid from "@mui/material/Unstable_Grid2";
 import { CardContent, Divider } from "@mui/joy";
-import Item from "antd/es/descriptions/Item";
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardMedia,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { Card, CardMedia } from "@mui/material";
+import { useState } from "react";
 
 const VideoPlayer = () => {
   const location = useLocation();
@@ -25,10 +16,6 @@ const VideoPlayer = () => {
   const formattedMarkdown = course.description
     .replace(/\\n/g, "\n")
     .replace(/\\/g, "");
-
-  console.log(course);
-
-  const playerRef = useRef(null);
 
   return (
     <div className="video-container">

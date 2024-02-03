@@ -25,19 +25,8 @@ type Course = {
 };
 
 const MainHome = () => {
-  //   const [courses, setCourses] = useState(coursesFromHome);
-  //   const [quizzes, setQuizzes] = useState(quizzesFromHome);
-
   const { courses, quizzes } = useData();
   const navigate = useNavigate();
-
-  //   useEffect(() => {
-  //     setCourses(coursesFromHome);
-  //   }, [coursesFromHome]);
-
-  //   useEffect(() => {
-  //     setQuizzes(quizzesFromHome);
-  //   }, [quizzesFromHome]);
 
   const handleCourseClick = (course: Course) => {
     // Navigate to VideoPlayer and pass the selected course data
