@@ -128,12 +128,46 @@ const MainHome = () => {
         )}
         <h2 className="section-title">Utilities 🔨</h2>
         <Row gutter={[16, 16]}>
-          <Col xs={24} sm={12} md={8} lg={6}>
-            <Link to="/Editor">
+          <Link to="/Editor">
+            <div className="planet-container">
+              <div className="orbit"></div>
+              <div className="planet">
+                <span className="plante-name">HTML Editor</span>
+              </div>
+              <div className="satellite html">
+                <FontAwesomeIcon icon={faHtml5} />
+              </div>
+              <div className="satellite css">
+                <FontAwesomeIcon icon={faCss3Alt} />
+              </div>
+              <div className="satellite js">
+                <FontAwesomeIcon icon={faJs} />
+              </div>
+            </div>
+          </Link>
+          <Link to="/web-builder">
+            <div className="planet-container">
+              <div className="orbit"></div>
+              <div className="planet2">
+                <span className="plante-name">Web Builder</span>
+              </div>
+              <div className="satellite html">
+                <FontAwesomeIcon icon={faHtml5} />
+              </div>
+              <div className="satellite css">
+                <FontAwesomeIcon icon={faCss3Alt} />
+              </div>
+              {/* <div className="satellite js">
+                <FontAwesomeIcon icon={faJs} />
+              </div> */}
+            </div>
+          </Link>
+          {/* <Col xs={24} sm={6} md={6} lg={6}>
+            <Link to="/web-builder">
               <div className="planet-container">
                 <div className="orbit"></div>
                 <div className="planet">
-                  <span className="plante-name">HTML Editor</span>
+                  <span className="plante-name">Web Builder</span>
                 </div>
                 <div className="satellite html">
                   <FontAwesomeIcon icon={faHtml5} />
@@ -146,7 +180,7 @@ const MainHome = () => {
                 </div>
               </div>
             </Link>
-          </Col>
+          </Col> */}
         </Row>
       </div>
       <div className="footer">

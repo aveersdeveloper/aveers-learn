@@ -12,10 +12,13 @@ import SpaceEditor from "./pages/editors/markdown/spaceeditor";
 import StarComponent from "./components/new/Starry";
 import VideoPlayer from "./pages/player/VideoPlayer";
 import MainHome from "./pages/home/MainHome";
+import WebBuilder from "./pages/web-builder/WebBuilder";
 
 const Links = () => {
   return (
     <Routes>
+      <Route path="/web-builder" element={<WebBuilder />} />
+
       <Route path="/signin" element={<Login />} />
       <Route path="/NotAuthorized" element={<NotAuthorized />} />
       <Route path="/Intro" element={<Intro />} />

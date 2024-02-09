@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Space, Select, message, Switch } from "antd";
+import { Table, Space, Select, message, Switch, DatePicker } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import { doc, getDocs, updateDoc, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig"; // Adjust path based on your folder structure
@@ -14,6 +14,7 @@ const Quizzes: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const [quizName, setQuizName] = useState("");
+  const [quizEndDate, setQuizEndDate] = useState("");
   const [questions, setQuestions] = useState([
     { text: "", options: ["", ""], correctAnswer: 0, points: 1 },
   ]);
@@ -71,6 +72,7 @@ const Quizzes: React.FC = () => {
       // Save the quiz to Firestore
       const quizData = {
         name: quizName,
+        endDate: quizEndDate,
         questions,
         enabled: false,
       };
@@ -185,6 +187,14 @@ const Quizzes: React.FC = () => {
             value={quizName}
             onChange={(e) => setQuizName(e.target.value)}
             className="quiz-name-input"
+          />
+          <DatePicker
+            className="datepicker"
+            onChange={(_e, date) => {
+              setQuizEndDate(date.toString);
+              console.log(quizEndDate);
+            }}
+            style={{ marginBottom: "15px" }}
           />
           {questions.map((question, qIndex) => (
             <div key={qIndex} className="question-section">

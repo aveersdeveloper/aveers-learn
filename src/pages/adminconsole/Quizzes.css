@@ -1,48 +1,48 @@
 .quizzes-page {
-    background-color: #1b2431;
-    padding: 2rem;
-    height: 100%;
-    color: #E0E0E0;
+  background-color: #1b2431;
+  padding: 2rem;
+  height: 100%;
+  color: #e0e0e0;
 }
 
 .quizzes-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .quizzes-page .ant-input {
-    background-color: #2b3760;
-    border-color: #2b3760;
-    color: #E0E0E0;
-    width: 60%;
+  background-color: #2b3760;
+  border-color: #2b3760;
+  color: #e0e0e0;
+  width: 60%;
 }
 
 .quizzes-page .ant-input::placeholder {
-    color: rgba(224, 224, 224, 0.5);
+  color: rgba(224, 224, 224, 0.8);
 }
 
 .quizzes-page .ant-table-thead > tr > th {
-    color: #E0E0E0;
-    border-bottom: 1px solid #2b3760;
-    border-right: 1px solid #2b3760;
-    background-color: #2b3760;
+  color: #e0e0e0;
+  border-bottom: 1px solid #2b3760;
+  border-right: 1px solid #2b3760;
+  background-color: #2b3760;
 }
 
 .quizzes-page .ant-table-tbody > tr > td {
-    color: #E0E0E0;
-    border-bottom: 1px solid #2b3760;
-    border-right: 1px solid #2b3760;
-    background-color: #2b3760;
+  color: #e0e0e0;
+  border-bottom: 1px solid #2b3760;
+  border-right: 1px solid #2b3760;
+  background-color: #2b3760;
 }
 
 .quizzes-page .ant-table-tbody > tr.ant-table-row:hover {
-    background-color: rgba(43, 55, 96, 0.7);
+  background-color: rgba(43, 55, 96, 0.7);
 }
 
 .quizzes-page .ant-btn-primary {
-    background-color: #1890ff;
-    border-color: #1890ff;
+  background-color: #1890ff;
+  border-color: #1890ff;
 }
 
 /* .modal-content {
@@ -52,199 +52,209 @@
 }
  */
 
-
- .quiz-modal {
-    background-color: #1b2431 !important;
-    color: #E0E0E0;
+.quiz-modal {
+  background-color: #1b2431 !important;
+  color: #e0e0e0;
 }
 
 .quiz-form {
-    padding: 1rem;
+  padding: 1rem;
 }
 
-.quiz-name-input, .question-input, .option-input {
-    width: 100%;
-    margin-bottom: 1rem;
-    background-color: #2b3760;
-    border-color: #2b3760;
-    color: #E0E0E0;
-    border-radius: 4px;
+.quiz-name-input,
+.question-input,
+.option-input,
+.datepicker {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #2b3760;
+  border-color: #2b3760;
+  color: #e0e0e0 !important;
+  border-radius: 4px;
 }
 
 .question-section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #2b3760;
-    border-radius: 5px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #2b3760;
+  border-radius: 5px;
 }
 
 .option-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .remove-option-btn {
-    margin-left: 1rem;
-    padding: 0 0.5rem;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
 }
 
-.add-option-btn, .remove-question-btn, .add-question-btn, .submit-quiz-btn {
-    width: 100%;
-    margin-top: 1rem;
+.add-option-btn,
+.remove-question-btn,
+.add-question-btn,
+.submit-quiz-btn {
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .answer-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.correct-answer-select, .points-input {
-    width: 40%;
-    background-color: #2b3760;
-    border-color: #2b3760;
-    color: #E0E0E0;
+.correct-answer-select,
+.points-input {
+  width: 40%;
+  background-color: #2b3760;
+  border-color: #2b3760;
+  color: #e0e0e0;
 }
 
 .submit-quiz-btn {
-    background-color: #1890ff;
-    border-color: #1890ff;
-    margin-top: 2rem;
+  background-color: #1890ff;
+  border-color: #1890ff;
+  margin-top: 2rem;
 }
 
 /*              */
 
 /* Modal specific styles */
 .quiz-modal .ant-modal-content {
-    background-color: #1b2431;
-    color: #E0E0E0;
+  background-color: #1b2431;
+  color: #e0e0e0;
 }
 
 .quiz-modal .ant-modal-header {
-    background-color: #2b3760;
-    border-bottom: 1px solid #2b3760;
+  background-color: #2b3760;
+  border-bottom: 1px solid #2b3760;
 }
 
 .quiz-modal .ant-modal-title {
-    color: #E0E0E0;
+  background-color: #1b2431 !important;
+  color: #e0e0e0;
 }
 
 .quiz-modal .ant-modal-close-x {
-    color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 /* Rest of the styles remain the same */
 .quiz-form {
-    padding: 1rem;
+  padding: 1rem;
 }
 
-.quiz-name-input, .question-input, .option-input {
-    width: 100%;
-    margin-bottom: 1rem;
-    background-color: #2b3760;
-    border-color: #2b3760;
-    color: #E0E0E0;
-    border-radius: 4px;
+.quiz-name-input,
+.question-input,
+.option-input {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #2b3760;
+  border-color: #2b3760;
+  color: #e0e0e0;
+  border-radius: 4px;
 }
 
 .question-section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid #2b3760;
-    border-radius: 5px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #2b3760;
+  border-radius: 5px;
 }
 
 .option-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .remove-option-btn {
-    margin-left: 1rem;
-    padding: 0 0.5rem;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
 }
 
-.add-option-btn, .remove-question-btn, .add-question-btn, .submit-quiz-btn {
-    width: 100%;
-    margin-top: 1rem;
+.add-option-btn,
+.remove-question-btn,
+.add-question-btn,
+.submit-quiz-btn {
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .answer-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.correct-answer-select, .points-input {
-    width: 40%;
-    background-color: #2b3760;
-    border-color: #2b3760;
-    color: #E0E0E0;
+.correct-answer-select,
+.points-input {
+  width: 40%;
+  background-color: #2b3760;
+  border-color: #2b3760;
+  color: #e0e0e0;
 }
 
 .submit-quiz-btn {
-    background-color: #1890ff;
-    border-color: #1890ff;
-    margin-top: 2rem;
+  background-color: #1890ff;
+  border-color: #1890ff;
+  margin-top: 2rem;
 }
-
 
 /* ... (previous styles) ... */
 
 /* Button styles */
 .quiz-modal .add-question-btn,
 .quiz-modal .add-option-btn {
-    color: #E0E0E0;
-    border-color: #2b3760;
-    background-color: #1b2431;
+  color: #e0e0e0;
+  border-color: #2b3760;
+  background-color: #1b2431;
 }
 
-.quiz-modal .add-question-btn:hover, 
+.quiz-modal .add-question-btn:hover,
 .quiz-modal .add-question-btn:focus,
-.quiz-modal .add-option-btn:hover, 
+.quiz-modal .add-option-btn:hover,
 .quiz-modal .add-option-btn:focus {
-    color: #1890ff;
-    border-color: #1890ff;
-    background-color: #2b3760;
+  color: #1890ff;
+  border-color: #1890ff;
+  background-color: #2b3760;
 }
 
 /* Dropdown styles */
 .quiz-modal .correct-answer-dropdown .ant-select-selector {
-    background-color: #2b3760;
-    border-color: #2b3760;
-    color: #E0E0E0;
+  background-color: #2b3760;
+  border-color: #2b3760;
+  color: #e0e0e0;
 }
 
 .quiz-modal .correct-answer-dropdown.ant-select-focused .ant-select-selector,
 .quiz-modal .correct-answer-dropdown .ant-select-selector:focus,
 .quiz-modal .correct-answer-dropdown .ant-select-selector:active,
 .quiz-modal .correct-answer-dropdown.ant-select-open .ant-select-selector {
-    border-color: #1890ff;
-    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
 }
 
 .quiz-modal .correct-answer-dropdown .ant-select-item {
-    background-color: #2b3760;
-    color: #E0E0E0;
+  background-color: #2b3760;
+  color: #e0e0e0;
 }
 
 .quiz-modal .correct-answer-dropdown .ant-select-item-selected,
 .quiz-modal .correct-answer-dropdown .ant-select-item:hover {
-    background-color: #1b2431;
+  background-color: #1b2431;
 }
 
 /* ... (rest of the styles) ... */
 
-
 .custom-row-class:hover {
-    background-color: #2b3760 !important;
+  background-color: #2b3760 !important;
 }
 
 .quizzes-page .ant-table-row:hover {
-    background-color: #2b3760 !important;
+  background-color: #2b3760 !important;
 }
-
